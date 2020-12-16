@@ -1,4 +1,4 @@
-TWRP device tree for Motorola g7 Power (ocean)
+TWRP device tree for Motorola g(7) Play (channel)
 ==================================
 ## Device specifications
 
@@ -7,17 +7,17 @@ Basic   | Spec Sheet
 CPU     | Octa-core 1.8 GHz Cortex-A53
 CHIPSET | Qualcomm SDM632 Snapdragon 632
 GPU     | Adreno 506
-Memory  | 3GB (USA) / 4GB (EU)
+Memory  | 2GB
 Shipped Android Version | 9.0 (Pie)
-Internal Storage | 32GB  (USA) / 64GB  (EU)
+Internal Storage | 32GB
 microSD | Up to 1 TB (dedicated slot)
-Battery | 5000 mAh
-Dimensions | 157 x 75.3 x 8 mm
-Display | 1520 x 720 pixels, 6.2-inch IPS LCD
-Rear Camera  | 12 MP (f/1.8, 1.25µm, PDAF)
-Front Camera | 8 MP 1.12µm, HDR
+Battery | 3000 mAh
+Dimensions | 147.3 x 71.5 x 8 mm 
+Display | 720 x 1512  pixels, 5.7-inch IPS LCD
+Rear Camera  | 13 MP (f/2.0, 1.12µm, PDAF)
+Front Camera | 8 MP (f/2.2, 1.12µm, HDR)
 
-![Motorola g7 power](https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g7-power-1.jpg "Motorola g7 power")
+![Motorola g7 play](https://fdn2.gsmarena.com/vv/pics/motorola/motorola-moto-g7-play-1.jpg "Motorola g7 play")
 
 ### Kernel Source
 
@@ -29,7 +29,7 @@ See /prebuilt/README.md
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
-lunch omni_ocean-eng
+lunch omni_channel-eng
 mka adbd recoveryimage
 ```
 

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/motorola/ocean
+DEVICE_PATH := device/motorola/channel
 
 # Architecture
 TARGET_ARCH := arm64
@@ -46,7 +46,7 @@ BOARD_KERNEL_CMDLINE := \
     androidboot.bootdevice=7824900.sdhci \
     androidboot.usbconfigfs=true \
     androidboot.hab.csv=1 \
-    androidboot.hab.product=ocean \
+    androidboot.hab.product=channel \
     androidboot.hab.cid=50 \
     androidboot.selinux=permissive \
     androidboot.fastboot=1
@@ -70,8 +70,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432        #    32768 * 1024 mmcblk0p41-42
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 33554432
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608           #     8192 * 1024 mmcblk0p43-44
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2885681152    #  2818048 * 1024 mmcblk0p62-63
-#BOARD_USERDATAIMAGE_PARTITION_SIZE := 23165123584 # 22622191 * 1024 mmcblk0p64
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2466250752    #  2408448 * 1024 mmcblk0p62-63
+#BOARD_USERDATAIMAGE_PARTITION_SIZE := 24540855808 # 23965679 * 1024 mmcblk0p64
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_USERIMAGES_USE_EXT4 := true

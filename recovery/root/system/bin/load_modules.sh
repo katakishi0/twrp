@@ -10,29 +10,14 @@ load_panel()
     echo "panel supplier vendor is: [$panel_supplier]"
 
     case $panel_supplier in
-        ofilm)
-            insmod /vendor/lib/modules/focaltech_mmi.ko
+        djn)
+            insmod /vendor/lib/modules/nova_36525_mmi.ko
             ;;
-        tianma)
-            insmod /vendor/lib/modules/focaltech_mmi.ko
+        dsbj)
             insmod /vendor/lib/modules/ilitek_mmi.ko
-            rmmod /vendor/lib/modules/ilitek_mmi.ko
-            insmod /vendor/lib/modules/ilitek_mmi.ko
-            rmmod /vendor/lib/modules/ilitek_mmi.ko
-            insmod /vendor/lib/modules/ilitek_mmi.ko
-            rmmod /vendor/lib/modules/ilitek_mmi.ko
-            insmod /vendor/lib/modules/ilitek_mmi.ko
-            rmmod /vendor/lib/modules/ilitek_mmi.ko
-            insmod /vendor/lib/modules/ilitek_mmi.ko
-            rmmod /vendor/lib/modules/ilitek_mmi.ko
-            wait 6
-            insmod /vendor/lib/modules/ilitek_mmi.ko
-            ;;
-        csot)
-            insmod /vendor/lib/modules/nova_mmi.ko
             ;;
         *)
-		    echo "$panel_supplier not supported"
+		    insmod /vendor/lib/modules/himax_mmi.ko
 		        ;;
     esac
     umount /vendor
@@ -48,17 +33,11 @@ device_model()
     echo "device name is: [$device_name]"
 
     case $device_name in
-        river)
+        channel)
             insmod /vendor/lib/modules/tps61280.ko
             insmod /vendor/lib/modules/drv2624_mmi.ko
-            insmod /vendor/lib/modules/aw869x.ko
-            insmod /vendor/lib/modules/sx933x_sar.ko
-            ;;
-        ocean)
-            insmod /vendor/lib/modules/aw8624.ko
-            insmod /vendor/lib/modules/drv2624_mmi.ko
+            insmod /vendor/lib/modules/sx931x_triple
             insmod /vendor/lib/modules/sx932x_sar.ko
-            insmod /vendor/lib/modules/tps61280.ko
             ;;
         *)
             echo "$device_name not supported"
