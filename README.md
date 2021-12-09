@@ -27,10 +27,8 @@ See /prebuilt/README.md
 
 ```sh
 . build/envsetup.sh
-export ALLOW_MISSING_DEPENDENCIES=true
-export LC_ALL=C
-lunch omni_channel-eng
-mka adbd recoveryimage
+lunch twrp_channel-eng
+mka adbd bootimage
 ```
 
 ### Build with TWRP installer
