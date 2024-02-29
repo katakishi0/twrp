@@ -169,6 +169,10 @@ VENDOR_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 BOARD_USES_QCOM_FBE_DECRYPTION := true
 
+# Partitions (listed in the file) to be wiped under recovery.
+TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/root/system/etc/recovery.wipe
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
 # Extras
 ALLOW_MISSING_DEPENDENCIES := true
 USE_RECOVERY_INSTALLER := true
