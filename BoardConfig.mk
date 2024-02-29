@@ -99,6 +99,7 @@ TW_INCLUDE_FASTBOOTD := true
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := retrofit
+TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 80
 TW_USE_TOOLBOX := true
