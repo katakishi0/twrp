@@ -99,11 +99,6 @@ TW_INCLUDE_FASTBOOTD := true
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := retrofit
-TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
-TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 80
-TW_USE_TOOLBOX := true
-TW_MTP_DEVICE := "Moto G7 Play"
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TARGET_RECOVERY_QCOM_RTC_FIX := true
