@@ -39,6 +39,7 @@ AB_OTA_PARTITIONS += \
 
 PRODUCT_PACKAGES += \
     otapreopt_script \
+    check_dynamic_partitions \
     cppreopts.sh \
     update_engine \
     update_verifier
@@ -52,6 +53,10 @@ AB_OTA_POSTINSTALL_CONFIG += \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=ext4 \
     POSTINSTALL_OPTIONAL_system=true
+
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # qcom standard decryption
 PRODUCT_PACKAGES += \
