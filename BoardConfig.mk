@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
 
 DEVICE_PATH := device/motorola/channel
 
@@ -94,11 +96,10 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendore
 
-#Fastbootd
-TW_INCLUDE_FASTBOOTD := true
-
 # TWRP specific build flags
 TW_DEVICE_VERSION := retrofit
+TW_INCLUDE_FASTBOOTD := true
+TW_INCLUDE_PYTHON := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TARGET_RECOVERY_QCOM_RTC_FIX := true
@@ -179,3 +180,9 @@ TW_HAS_EDL_MODE := true
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+
+# TWRP 12.1 requirements
+TARGET_SUPPORTS_64_BIT_APPS := true
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
