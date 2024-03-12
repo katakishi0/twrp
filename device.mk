@@ -21,6 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 # define hardware platform
 PRODUCT_PLATFORM := msm8953
 
+# Dynamic partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
 # A/B support
 AB_OTA_UPDATER := true
 
@@ -68,7 +71,8 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd 	
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
