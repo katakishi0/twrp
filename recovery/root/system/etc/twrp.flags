@@ -32,3 +32,6 @@
 
 # define another mount point for persist to satisfy Repack Image
 /mnt/vendor/persist         ext4       /dev/block/bootdevice/by-name/persist
+
+# System partitions (needed for non retrofit convert to retrofit)
+/system_root   ext4   	/dev/block/bootdevice/by-name/system                 flags=display="system_root"
