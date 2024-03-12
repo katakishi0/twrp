@@ -17,7 +17,7 @@
 # 	
 # 	Please maintain this if you use this script or any part of it
 #
-FDEVICE="cepheus"
+FDEVICE="channel"
 
 fox_get_target_device() {
 local chkdev=$(echo "$BASH_SOURCE" | grep -w \"$FDEVICE\")
@@ -39,7 +39,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_STATUS_INDENT_LEFT="48"
 	export OF_STATUS_INDENT_RIGHT="48"
 	export OF_SCREEN_H=2340
-	export TARGET_DEVICE_ALT="cepheus"
+	export TARGET_DEVICE_ALT="channel"
 	export OF_PATCH_AVB20=1
    	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES=1
    	export OF_USE_MAGISKBOOT="1"
