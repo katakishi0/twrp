@@ -94,7 +94,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_ODM := odm
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
-TARGET_COPY_OUT_VENDOR := vendore
+TARGET_COPY_OUT_VENDOR := vendor
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := retrofit
